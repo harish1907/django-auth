@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sign Up</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <form action="" method="POST" novalidate>
+            {% csrf_token %}
+
+            {{form.as_p}}
+            {% comment %} {% for fm in form %}
+                {{fm.label_tag}} {{fm}}
+                {% if fm.errors %}
+                    {% for er in fm.errors %}
+                        {{er}}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %} {% endcomment %}
+            <input type="submit" value="submit">
+        </form>
+        <a href="{% url 'login' %}">login</a>
+
+        <script src="" async defer></script>
+    </body>
+</html>
