@@ -22,5 +22,6 @@ urlpatterns = [
     path("signup/", signupform, name="signup"),
     path("login/", login, name="login"),
     path("profile/", profile, name="profile"),
-    path("logout/", logoutpage, name="logout")
+    path("logout/", logoutpage, name="logout"),
+    path("changepass/", changepass_with_oldpass, name="changepass")
 ]
